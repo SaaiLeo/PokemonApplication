@@ -11,8 +11,7 @@ struct SpritesViewModel {
     
     static let shared = SpritesViewModel()
     
-    func fetchData(completion: @escaping ([BackDefault]) -> ()) {
-        let url = "https://pokeapi.co/api/v2/pokemon/1/"
+    func fetchData(url: String, completion: @escaping (BackDefault) -> ()) {
         guard let urlConvert = URL(string: url) else {return}
         URLSession.shared.dataTask(with: urlConvert) { data, response, error in
             if error == nil {

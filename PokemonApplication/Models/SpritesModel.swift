@@ -8,10 +8,14 @@
 import Foundation
 
 struct SpriteModel: Codable {
-    let sprites: [BackDefault]
+    let sprites: BackDefault
     
 }
 
 struct BackDefault: Codable, Hashable {
     let back_default: String
+    
+    enum CodingKeys: String, CodingKey {
+        case back_default = "front_default"
+    }
 }

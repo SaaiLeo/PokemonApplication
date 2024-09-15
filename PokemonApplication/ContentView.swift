@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State var pokemons: [Pokemon] = []
-    @State var sprites: [BackDefault] = []
+    @State var sprites: BackDefault?
     var names: [String] = ["Leo", "Morpeko"]
     
     var body: some View {
         VStack {
             List(pokemons, id: \.self) { pokemon in
-                Text(pokemon.name)
+                HStack {
+                    PokemonImageView(url: pokemon.url)
+                    Text(pokemon.name)
+                }
             }
 
         }
@@ -24,6 +27,7 @@ struct ContentView: View {
                 pokemon in
                 self.pokemons = pokemon
             }
+            
         })
         .padding()
     }

@@ -15,6 +15,8 @@
 		B33AAD0D2C96B63A00573028 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AAD0C2C96B63A00573028 /* PokemonViewModel.swift */; };
 		B33AAD0F2C96C13C00573028 /* SpritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AAD0E2C96C13C00573028 /* SpritesModel.swift */; };
 		B33AAD112C96C1FD00573028 /* SpritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AAD102C96C1FD00573028 /* SpritesViewModel.swift */; };
+		B33AAD142C96C97000573028 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B33AAD132C96C97000573028 /* SDWebImageSwiftUI */; };
+		B33AAD162C96C98B00573028 /* PokemonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AAD152C96C98B00573028 /* PokemonImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		B33AAD0C2C96B63A00573028 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 		B33AAD0E2C96C13C00573028 /* SpritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritesModel.swift; sourceTree = "<group>"; };
 		B33AAD102C96C1FD00573028 /* SpritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritesViewModel.swift; sourceTree = "<group>"; };
+		B33AAD152C96C98B00573028 /* PokemonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33AAD142C96C97000573028 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 		B33AAD092C96B40900573028 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B33AAD152C96C98B00573028 /* PokemonImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +124,9 @@
 			dependencies = (
 			);
 			name = PokemonApplication;
+			packageProductDependencies = (
+				B33AAD132C96C97000573028 /* SDWebImageSwiftUI */,
+			);
 			productName = PokemonApplication;
 			productReference = B33AACF62C96B1D300573028 /* PokemonApplication.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +155,9 @@
 				Base,
 			);
 			mainGroup = B33AACED2C96B1D300573028;
+			packageReferences = (
+				B33AAD122C96C97000573028 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = B33AACF72C96B1D300573028 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,6 +189,7 @@
 				B33AAD0F2C96C13C00573028 /* SpritesModel.swift in Sources */,
 				B33AAD112C96C1FD00573028 /* SpritesViewModel.swift in Sources */,
 				B33AAD0D2C96B63A00573028 /* PokemonViewModel.swift in Sources */,
+				B33AAD162C96C98B00573028 /* PokemonImageView.swift in Sources */,
 				B33AAD0B2C96B41B00573028 /* PokemonModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B33AAD122C96C97000573028 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B33AAD132C96C97000573028 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B33AAD122C96C97000573028 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B33AACEE2C96B1D300573028 /* Project object */;
 }
