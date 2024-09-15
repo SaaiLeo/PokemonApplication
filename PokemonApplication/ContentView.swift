@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var pokemons: [Pokemon] = []
+    @State var sprites: [BackDefault] = []
+    var names: [String] = ["Leo", "Morpeko"]
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List(pokemons, id: \.self) { pokemon in
+                Text(pokemon.name)
+            }
+
         }
+        .onAppear(perform: {
+            PokemonViewModel.shared.fetchData{
+                pokemon in
+                self.pokemons = pokemon
+            }
+        })
         .padding()
     }
 }
